@@ -37,6 +37,8 @@ body {
     background-size: 100% 100%;
 }
 
+
+
 [data-bs-theme="dark"] .navbar-nav .nav-link {
     color: #e3c4c1;
 }
@@ -53,11 +55,6 @@ body {
     transform: scale(1.2);
 }
 
-.socials {
-    text-decoration: none;
-    color: inherit;
-}
-
 .custom-navbar-bg {
     border-bottom: none
 }
@@ -69,6 +66,14 @@ body {
 .navbar-brand.active {
     font-family: "Kaushan Script", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #f6a4bb;
+}
+
+
+@media (max-width: 991x) {
+    .sidebar {
+        background-color: #c652b3a0;
+        backdrop-filter: blur(10px);
+    }
 }
 
 .main {
@@ -92,12 +97,13 @@ body {
 }
 
 .main h1 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 2vw + 1.5rem, 3rem);
 }
 
 .main h2 {
     font-family: "Robot", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: italic;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
     font-weight: 100;
     color: #ffffffc1;
 }
@@ -176,18 +182,55 @@ section .card-item {
     color: #e3c4c1;
 }
 
+
 #my-photo {
     border-radius: 50%;
-    max-width: 900px;
-    width: 100%;
+    background-color: #e3c4c1;
+    height: 75%;
+    width: 90%;
+    max-width: 1100px;
 }
+
+@media (max-width: 1190px) {
+    #my-photo {
+        max-width: 95%;
+        max-height: 50%;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 990px) {
+    #my-photo {
+        max-width: 95%;
+        max-height: 45%;
+        margin: auto;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (max-width: 768px) {
+    #my-photo {
+        max-width: 65%;
+        margin: auto;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    #my-photo {
+        max-width: 50%;
+        margin: auto;
+    }
+}
+
 
 .card-projects .col {
     padding: 1rem;
 }
 
 
-.text-center {
+.container .skills-text {
     font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #ffffffc1;
     font-weight: 800;

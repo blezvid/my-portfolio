@@ -15,17 +15,31 @@
 <body>
     <div class="home">
         <div class="gradient-overlay">
-            <nav class="navbar navbar-expand-lg custom-navbar-bg" data-bs-theme="dark">
-                <div id="navbar-items" class="container-fluid ms-5 me-5 ps-2 pe-2">
-                    <a class="navbar-brand active fs-2" href="#" aria-current="page" href="#main">Blezel Vidal</a>
-                    <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+            <!-- navigation bar -->
+            <!-- Navbar container -->
+            <nav class="navbar navbar-expand-lg bg-transparent justify-content-center" data-bs-theme="dark">
+                <div id="navbar-items" class="container mx-0 py-1">
+                    <!-- Logo/Brand -->
+                    <a class="navbar-brand active fs-2" aria-current="page" href="#main">Blezel Vidal</a>
+                    <!-- Toggle Btn -->
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav container-fluid justify-content-between me-auto mb-2 mb-lg-0">
-                            <ul class="navbar-nav d-flex flex-lg-row flex-md-column flex-sm-column ps-4 gap-4">
+                    <!-- Sidebar -->
+                    <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <!-- Sidebar Header-->
+                        <div class="offcanvas-header border-bottom">
+                            <h5 class="navbar-brand active" id="offcanvasNavbarLabel">Blezel Vidal</h5>
+
+                            <button type="button" class="btn-close btn-close-white shadow-none"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <!-- Sidebar and Navbar Body -->
+                        <div class="d-flex flex-column flex-lg-row offcanvas-body gap-4 p-lg-0">
+                            <ul class="navbar-nav justify-content-start align-items-center flex-grow-1 ps-lg-4 gap-4">
                                 <li class="nav-item">
                                     <a class="nav-link hover-color-change" href="#about">About</a>
                                 </li>
@@ -40,43 +54,49 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link hover-color-change" href="my CV.pdf" role="button"
-                                        target="_blank">My CV</a>
+                                        target="_blank">My
+                                        CV</a>
                                 </li>
                             </ul>
-                            <div>
+                            <!-- Social Media Links -->
+                            <div class="d-flex justify-content-center align-items-center px-sm-4 gap-4">
                                 <a class="nav-link icon-link" href="https://www.linkedin.com/in/blezvid/"
                                     target="_blank"><img src="icons8-linkedin-30.png" alt="linkedin" width="25"
                                         height="25"></a>
                                 <a class="nav-link icon-link" href="https://github.com/blezvid" target="_blank"><img
                                         src="icons8-github-30.png" alt="github" width="25" height="25"></a>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
-            <header class="main">
+            <!-- main content for landing page -->
+            <header class="main d-flex align-item-center">
                 <h1>Hi, I'm Blezel!</h1>
                 <h2>(as in "ble-ZEL")</h2>
-                <h3><em>Junior Fullstack Developer</em></h3><br>
+                <h3 class="text-center"><em>Junior Fullstack Developer</em></h3><br>
                 <p>Looking to bring your brilliant ideas to life? Let's make it happen</p>
             </header>
         </div>
     </div>
-    <!-- <div class="container"> -->
+
     <section>
+        <!-- first container - for about me -->
         <div class="container" id="about">
-            <h2 class="mb-5">Who am I?</h2>
-            <div class="card d-flex flex-row px-5 py-5" id="about-section">
-                <div class="card-item"><img id="my-photo" src="blez (2).png" class="img-fluid" alt="my-photo"></div>
-                <div class="card-item">
+            <h2 class="mb-5 mt-3">Who am I?</h2>
+            <div class="card d-flex flex-lg-row flex-md-row flex-sm-column gap-3 px-lg-5 py-lg-5" id="about-section">
+                <div class="card-item d-flex flex-column justify-content-center"><img id="my-photo" src="blez (2).png"
+                        class="img-fluid" alt="my-photo">
+                </div>
+                <div class="card-item d-flex flex-column">
                     <h5><b>From Stethoscopes to Syntax: My Journey into Tech</b></h5>
 
                     <p class="fst-italic"><span id="name-intro">Hello! My name is Blezel</span> (think of "Brazil"
                         and "Gazelle"
                         combined...clever, right?!)</p>
 
-
-                    <h5>I'm a junior software developer based in London, UK.</h5>
+                    <h5>I'm a junior
+                        ftware developer based in London, UK.</h5>
 
                     <p>From a decade-long career as a nurse to diving headfirst into the exciting world of tech, I offer
                         a special blend of
@@ -103,6 +123,7 @@
                 </div>
             </div>
         </div>
+        <!-- second container - for my projects -->
         <div class="container" id="projects">
             <h2 class="mb-5">Recent projects I've been crafting</h2>
             <div class="card-group">
@@ -136,48 +157,49 @@
                 </div>
             </div>
         </div>
+        <!-- third container - for developer skills -->
         <div class="container" id="skills">
             <h2 class="mb-5">Technical skills in my toolbox</h2>
             <div class="card-projects container d-flex flex-wrap justify-content-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">HTML5</div>
+                    <div class="skills-text text-center">HTML5</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-html5-100.png" alt="html-5" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">CSS</div>
+                    <div class="skills-text text-center">CSS</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-css-100.png" alt="css3" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">JavaScript</div>
+                    <div class="skills-text text-center">JavaScript</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-javascript-100.png"
                             alt="javascript" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">Python</div>
+                    <div class="skills-text text-center">Python</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-python-100.png" alt="python" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">MySQL</div>
+                    <div class="skills-text text-center">MySQL</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-database-100.png" alt="database" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">Git</div>
+                    <div class="skills-text text-center">Git</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-git-100.png" alt="git" /></div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
-                    <div class="text-center">Bootstrap</div>
+                    <div class="skills-text text-center">Bootstrap</div>
                     <div class="text-center"><img width="90" height="90" src="icons8-bootstrap-100.png"
                             alt="bootstrap" />
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- fourth container - for contact section -->
         <div class="container" id="contact">
             <h2 class="mb-5">Let's connect</h2>
             <div class="d-flex flex-column">
@@ -185,7 +207,7 @@
                     together?
                     <br> Drop me a message—I’d love to chat!
                 </p>
-                <form class="d-flex flex-column align-items-center">
+                <form class="d-flex flex-column align-items-center" id="form">
                     <label for="exampleFormControlFullname" class="form-label"></label>
                     <input type="text" class="form-control" id="exampleFormControlFullname" placeholder="Name">
                     <label for="exampleFormControlInput1" class="form-label"></label>
@@ -201,7 +223,7 @@
             </div>
         </div>
     </section>
-    <!-- </div> -->
+
     <footer class="d-flex flex-row justify-content-center align-middle">
         <p class="mb-0">Copyright © 2024 Blezel Vidal | Icons by <a class="link-secondary" target="_blank"
                 href="https://icons8.com">Icons8</a></p>
