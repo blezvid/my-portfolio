@@ -74,20 +74,25 @@
             <header class="main d-flex align-item-center">
                 <h1>Hi, I'm Blezel!</h1>
                 <h2>(as in "ble-ZEL")</h2>
-                <h3 class="text-center"><em>Junior Fullstack Developer</em></h3><br>
-                <p>Looking to bring your brilliant ideas to life? Let's make it happen</p>
+                <h3 class="text-center"><em>Junior Fullstack Developer</em></h3>
+                <div class="d-flex flex-column flex-lg-row gap-lg-2 pt-2">
+                    <p class="mb-0">Looking to bring your brilliant ideas to life?</p>
+                    <p class="mb-0">Let's make it happen</p>
+                </div>
             </header>
         </div>
     </div>
 
     <section>
-        <!-- first container - for about me -->
+        <!-- ABOUT section -->
         <div class="container" id="about">
             <h2 class="mb-5 mt-3">Who am I?</h2>
             <div class="card d-flex flex-lg-row flex-md-row flex-sm-column gap-3 px-lg-5 py-lg-5" id="about-section">
+                <!-- my photo -->
                 <div class="card-item d-flex flex-column justify-content-center"><img id="my-photo" src="blez (2).png"
                         class="img-fluid" alt="my-photo">
                 </div>
+                <!-- intro about self -->
                 <div class="card-item d-flex flex-column">
                     <h5><b>From Stethoscopes to Syntax: My Journey into Tech</b></h5>
 
@@ -115,18 +120,27 @@
                         rejuvenating
                         weightlifting session.</p>
                     <p>Let's connect and brainstorm ideas to develop killer webpages and apps together!</p>
-
-                    <a class="btn btn-outline-secondary" href="my CV.pdf" role="button" target="_blank">Explore My
-                        Background:
-                        View
-                        My CV</a>
+                    <!-- CV button -->
+                    <div class="d-flex flex-row justify-content-center">
+                        <a class="btn btn-outline-secondary col-lg-6 col-md-10 col-sm-8" href="my CV.pdf" role="button"
+                            target="_blank">
+                            <div class="d-flex flex-column flex-xl-row flex-lg-column gap-2 justify-content-center">
+                                <p class="mb-0">Explore My
+                                    Background:</p>
+                                <p class="mb-0">View My CV</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- second container - for my projects -->
+        <!-- PROJECTS section -->
         <div class="container" id="projects">
             <h2 class="mb-5">Recent projects I've been crafting</h2>
             <div class="card-group">
+
+                <!-- TODO ---- TODO ----- TODO ----------------------->
+
                 <div class="card">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -156,11 +170,14 @@
                     </div>
                 </div>
             </div>
+
+            <!-- TODO ---- TODO ----- TODO ----------------------->
+
         </div>
-        <!-- third container - for developer skills -->
+        <!-- SKILLS section -->
         <div class="container" id="skills">
             <h2 class="mb-5">Technical skills in my toolbox</h2>
-            <div class="card-projects container d-flex flex-wrap justify-content-center">
+            <div class="card-skills container d-flex flex-wrap justify-content-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-4">
                     <div class="skills-text text-center">HTML5</div>
                     <div class="text-center"><img width="80" height="80" src="icons8-html5-100.png" alt="html-5" />
@@ -199,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <!-- fourth container - for contact section -->
+        <!-- CONTACT section -->
         <div class="container" id="contact">
             <h2 class="mb-5">Let's connect</h2>
             <div class="d-flex flex-column">
@@ -207,15 +224,19 @@
                     together?
                     <br> Drop me a message—I’d love to chat!
                 </p>
-                <form class="d-flex flex-column align-items-center" id="form">
+                <!-- form -->
+                <form class="d-flex flex-column align-items-center" id="user-form">
                     <label for="exampleFormControlFullname" class="form-label"></label>
-                    <input type="text" class="form-control" id="exampleFormControlFullname" placeholder="Name">
+                    <input type="text" class="form-control" id="exampleFormControlFullname" name="fullName"
+                        placeholder="Name" required>
+
                     <label for="exampleFormControlInput1" class="form-label"></label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
+                        placeholder="name@example.com" required>
+
                     <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your message"
-                        rows="5"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="message"
+                        placeholder="Your message" required="5"></textarea>
                     <div class="col-12 d-flex flex-row justify-content-center">
                         <button type="submit" class="btn btn-outline-secondary" id="submit-button">Send Message</button>
                     </div>
@@ -228,15 +249,6 @@
         <p class="mb-0">Copyright © 2024 Blezel Vidal | Icons by <a class="link-secondary" target="_blank"
                 href="https://icons8.com">Icons8</a></p>
     </footer>
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

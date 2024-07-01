@@ -208,7 +208,6 @@ section .card-item {
     }
 }
 
-/* Small devices (landscape phones, 576px to 767px) */
 @media (max-width: 768px) {
     #my-photo {
         max-width: 65%;
@@ -216,7 +215,7 @@ section .card-item {
     }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
+
 @media (max-width: 575px) {
     #my-photo {
         max-width: 50%;
@@ -225,7 +224,7 @@ section .card-item {
 }
 
 
-.card-projects .col {
+.card-skills .col {
     padding: 1rem;
 }
 
